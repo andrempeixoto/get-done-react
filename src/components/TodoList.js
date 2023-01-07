@@ -26,15 +26,15 @@ function TodoList() {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
-    setTodos((previous) =>
-      previous.map((item) => (item.id === todoId ? newValue : item))
+    setTodos((previousTodos) =>
+      previousTodos.map((item) => (item.id === todoId ? newValue : item))
     );
   };
 
   const removeTodo = (id) => {
-    const removeArr = [...todos].filter((todo) => todo.id !== id);
-    setTodos(removeArr);
-    saveToStorage(removeArr);
+    const filteredTodos = [...todos].filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+    saveToStorage(filteredTodos);
   };
 
   const completeTodo = (id) => {
