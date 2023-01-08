@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-  margin: 2.5rem;
+  margin: 2.5rem auto;
   color: lightcyan;
   font-size: 1.5rem;
   letter-spacing: 0.4rem;
@@ -51,10 +51,10 @@ h1 {
 
 .todo-form {
   display: flex;
+  min-width: 85%;
   align-self: center;
   margin: 0.25rem auto;
   margin-bottom: 2rem;
-  min-width: 85%;
 }
 
 .todo-input {
@@ -74,8 +74,8 @@ h1 {
 }
 
 .todo-button {
-  width: auto;
-  padding: 1rem 1.5rem ;
+  width: 5.375rem;
+  padding: 1rem 1.65rem ;
   border: transparent;
   border-radius: 0 0.25rem 0.25rem 0;
   cursor: pointer;
@@ -95,7 +95,6 @@ h1 {
 
 .todo-row {
   display: flex;
-  align-items: center;
   min-width: 85%;
   margin: 0.25rem auto;
   padding: 0 1rem;
@@ -115,12 +114,8 @@ h1 {
 .todo-icons {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  cursor: pointer;
   gap: 1rem;
-}
-
-.delete-icon, .edit-icon {
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -198,32 +193,13 @@ h1 {
 @media only screen and (max-width: 600px) {
   .todo-app {
     width: 90vw;
-    min-height: 90vh;
-    margin: 5vh auto;
   }
 
   h1 {
-    margin: 28px 38px;
-  }
-
-  .todo-input {
-    width: 70%;
-  }
-
-  .todo-button {
-    padding: 16px 5%;
+    margin: 1.75rem auto;
   }
 
   .todo-row {
-    width: 90%;
-    padding-right: .6rem;
+    min-width: 90%;
   }
-
-  .delete-icon {
-    margin-right: 0.5rem;
-  }
-
-  /* .edit-icon {
-    margin-right: .4rem;
-  } */
 }
