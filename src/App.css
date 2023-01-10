@@ -51,7 +51,7 @@ h1 {
 
 .todo-form {
   display: flex;
-  min-width: 85%;
+  width: 85%;
   align-self: center;
   margin: 0.25rem auto;
   margin-bottom: 2rem;
@@ -95,9 +95,10 @@ h1 {
 
 .todo-row {
   display: flex;
-  min-width: 85%;
+  width: 85%;
   margin: 0.25rem auto;
   padding: 0 1rem;
+  gap: 1rem;
   background-color: #383b4b;
   color: #fff;
   font-weight: 500;
@@ -108,7 +109,9 @@ h1 {
 .todo-row-text {
   flex: 1;
   padding: 1rem 0;
+  gap: 1rem;
   text-align: start;
+  overflow-wrap: anywhere;
 }
 
 .todo-icons {
@@ -193,13 +196,19 @@ h1 {
 @media only screen and (max-width: 600px) {
   .todo-app {
     width: 90vw;
+    min-height: 95vh;
+    margin: 2.5vh auto;
   }
 
   h1 {
     margin: 1.75rem auto;
   }
 
-  .todo-row {
-    min-width: 90%;
+  .todo-form, .todo-row {
+    width: 90%;
+  }
+
+  .todo-row, .todo-icons {
+    gap: 0.5rem;
   }
 }
